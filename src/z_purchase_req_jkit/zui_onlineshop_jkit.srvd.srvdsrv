@@ -1,0 +1,4 @@
+@EndUserText.label: 'Service definition forZC_ONLINESHOPTP_JKIT'
+define service ZUI_ONLINESHOP_JKIT {
+  expose ZC_ONLINESHOPTP_JKIT as OnlineShop;
+}

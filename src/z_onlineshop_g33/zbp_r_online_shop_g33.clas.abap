@@ -1,0 +1,15 @@
+CLASS zbp_r_online_shop_g33 DEFINITION  PUBLIC ABSTRACT FINAL FOR BEHAVIOR OF zr_online_shop_G33.
+*  PUBLIC
+*  FINAL
+*  CREATE PUBLIC .
+
+  PUBLIC SECTION.
+  class-DATA cv_pr_mapped TYPE RESPONSE FOR MAPPED i_purchaserequisitiontp.
+*  PROTECTED SECTION.
+*  PRIVATE SECTION.
+ENDCLASS.
+
+
+
+CLASS zbp_r_online_shop_g33 IMPLEMENTATION.
+ENDCLASS.

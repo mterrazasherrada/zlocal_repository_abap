@@ -1,0 +1,24 @@
+managed implementation in class zbp_i_online_shop_g97 unique;
+
+define behavior for ZI_ONLINE_SHOP_G97 alias Online_Shop
+persistent table zonlineshop_g97
+with additional save
+lock master
+authorization master ( instance )
+//etag master <field_name>
+{
+  field ( numbering : managed, readonly ) Order_Uuid;
+  field ( mandatory ) Ordereditem;
+  field ( readonly ) Creationdate, Order_id;
+  determination calcate_order_id on modify { create; }
+  internal action creatr_pr parameter $self;
+  internal action set_inforecord;
+  internal action update_inforecord;
+  create;
+  update;
+  delete;
+  mapping for zonlineshop_g97
+    {
+      PackageId = pkgid;
+    }
+ }
